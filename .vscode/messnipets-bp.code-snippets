@@ -31,7 +31,8 @@
 		"prefix": "click",
 		"body": [
 			
-			"$('$1').on( '$2', function() {"
+			"$('$1').on( '$2', function(e) {"
+			    "e.PreventDefault();"
 				"$('$3').hide();"
 			 " } );//click" 
 			
