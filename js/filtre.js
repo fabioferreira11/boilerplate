@@ -2,23 +2,48 @@ $( document ).ready(function() {
 
 
     
-        $(".filtres a").on('click', function(e){
-            e.preventDefault();
-            $(".filtres a").removeClass('current')
-            $(this).addClass('current')
+    //     $(".filtres a").on('click', function(e){
+    //         e.preventDefault();
+    //         $(".filtres a").removeClass('current')
+    //         $(this).addClass('current')
     
-            var section =$(this).attr('data-class');
+    //         var section =$(this).attr('data-class');
     
-            console.log(section);
+    //         console.log(section);
 
-            if(section == '*'){
-                $('article').show();
-            }else {
+    //         if(section == '*'){
+    //             $('article').show();
+    //         }else {
     
-            $('article').show();
-            $('article:not("'+section+'")').hide();        
-          } 
-    });// click 
+    //         $('article').show();
+    //         $('article:not("'+section+'")').hide();        
+    //       } 
+    // });// click 
+
+    $(".filtres a").on('click', function(e){
+        e.preventDefault();
+        $(".filtres a").removeClass('current')
+        $(this).addClass('current')
+
+        var section =$(this).attr('data-class');
+
+        console.log(section);
+
+        if(section == '*'){
+            $('article').fadeOut()
+            gsap.to("article", {
+                stagger: 0.1,
+                y:0,
+                delay:1,
+                display:"block",
+                });
+        }else {
+
+        $('article').fadeOut();
+        $('article'+section).delay(500).fadeIn();        
+      } 
+});// click 
+
 
    
 
