@@ -1,0 +1,21 @@
+h1 {
+  color: red;
+}
+
+div {
+  border: solid 1px red;
+}
+
+.container {
+  min-height: 30vh;
+}
+
+.fabio {
+  margin-bottom: 20px;
+}
+.fabio > div {
+  border: none;
+  background-color: cadetblue;
+  color: white;
+  padding: 10px;
+}/*# sourceMappingURL=moncssbootstrap.css.map */
