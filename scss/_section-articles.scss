@@ -37,12 +37,12 @@ align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: flex-start;
+    gap: $gapsize;
     width: 100%;
     & article{
         box-sizing: border-box;
-        width: calc(25% - 20px);
+        width: calc((100% - $gapsize * 3) / 4);
         & img{
         aspect-ratio: 16/9;
         object-fit: cover;

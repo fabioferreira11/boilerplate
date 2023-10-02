@@ -40,13 +40,13 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 20px;
   width: 100%;
 }
 .products .articles article {
   box-sizing: border-box;
-  width: calc(25% - 20px);
+  width: calc((100% - 60px) / 4);
 }
 .products .articles article img {
   aspect-ratio: 16/9;

@@ -30,17 +30,25 @@ $( document ).ready(function() {
         console.log(section);
 
         if(section == '*'){
-            $('article').fadeOut()
-            gsap.to("article", {
-                stagger: 0.1,
-                y:0,
-                delay:1,
-                display:"block",
-                });
+            $('article').show().css('opacity', 1)
+            // $('article').fadeOut()
+            // gsap.to("article", {
+            //     stagger: 0.1,
+            //     y:0,
+            //     delay:1,
+            //     display:"block",
+            //     });
         }else {
 
-        $('article').fadeOut();
-        $('article'+section).delay(500).fadeIn();        
+        // $('article').fadeOut();
+        $('article').css('opacity', 0).css('display', 'none')
+        gsap.to("article"+section,{
+            opacity: 1,
+            display: 'block',
+            stagger: 0.1
+        })  
+        // $('article'+section).delay(500).fadeIn()
+        // ;        
       } 
 });// click 
 
